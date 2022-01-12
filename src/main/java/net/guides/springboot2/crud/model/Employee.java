@@ -26,7 +26,13 @@ public class Employee {
          this.emailId = emailId;
     }
  
-    @Id
+    public Employee(long id, String firstName, String lastName, String emailId) {
+    	this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailId = emailId;
+	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
         public long getId() {
         return id;
